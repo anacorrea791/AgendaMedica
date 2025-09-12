@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using AgendaMedica.Data;
 using AgendaMedica.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AgendaMedica.Controllers
 {
+    [Authorize]
     public class PacientesController : Controller
     {
         private readonly ApplicationDbContext _context;
